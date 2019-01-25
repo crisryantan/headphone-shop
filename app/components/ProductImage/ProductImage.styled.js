@@ -17,4 +17,8 @@ export const ImageDiv = styled.div`
   @media (max-width: 768px) {
     height: 400px;
   }
+
+  @media (max-width: 576px) {
+    height: 250px;
+  }
 `;
