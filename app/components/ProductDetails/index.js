@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Tabs, Select } from 'antd';
 
 import {
@@ -22,6 +22,8 @@ const { Option } = Select;
 /* eslint-disable react/prefer-stateless-function */
 class ProductDetails extends React.PureComponent {
   render() {
+    const { hpColor, changeProductColor } = this.props;
+
     return (
       <Wrapper>
         <AllProducts>All products</AllProducts>
@@ -53,15 +55,22 @@ class ProductDetails extends React.PureComponent {
           $51.99 <StrikeThrough>$89.99</StrikeThrough>
         </h2>
         <ColorsLabel>COLORS</ColorsLabel>
-        <Select defaultActiveFirstOption style={{ width: 120 }}>
-          <Option value="white">&nbsp; white</Option>
-          <Option value="brown">&nbsp; Brown</Option>
+        <Select
+          defaultValue={hpColor}
+          style={{ width: 120 }}
+          onChange={changeProductColor}
+        >
+          <Option value="black">&nbsp; black</Option>
+          <Option value="brown">&nbsp; brown</Option>
         </Select>
       </Wrapper>
     );
   }
 }
 
-ProductDetails.propTypes = {};
+ProductDetails.propTypes = {
+  hpColor: PropTypes.string,
+  changeProductColor: PropTypes.func,
+};
 
 export default ProductDetails;
