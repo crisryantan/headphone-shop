@@ -61,7 +61,7 @@ export default class HomePage extends React.PureComponent {
             <Col
               xs={{ span: 24, order: 2 }}
               sm={{ span: 24, order: 2 }}
-              md={{ span: 12, order: 1 }}
+              md={{ span: 13, order: 1 }}
             >
               <ProductDetails
                 hpColor={hpColor}
@@ -85,7 +85,7 @@ export default class HomePage extends React.PureComponent {
               }}
               xs={{ span: 24, order: 1 }}
               sm={{ span: 24, order: 1 }}
-              md={{ span: 12, order: 2 }}
+              md={{ span: 11, order: 2 }}
             >
               <ProductImage hpColor={hpColor} />
             </Col>
